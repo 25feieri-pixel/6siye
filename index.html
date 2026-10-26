@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронювання туру</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 20px auto; padding: 10px; }
+        img { width: 100%; border-radius: 8px; }
+        input, select, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+        button { background: #007BFF; color: white; border: none; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Ваш туристичний тур</h2>
+    <!-- Ваше фото -->
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAJQA9gMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EADoQAAIBAwMBBgMHAwMEAwAAAAECAwAEERIhMUEFEyJRYXEygZEUI1KhscHRQuHwBjPxJENighU0ov/EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAIxEAAgICAAMAAgMBAAAAAAAAAAECERIhMQNBUQQTMmFxUv/aAAwPLOADojlqbBwKQgffJpxZFIpAhlU+72pWVZEb3o8cg+VUuJTjIIwKaGwGSpBNdkcFeaBNcA7c+1KPMcYFOhDE+orlWGB0rOldzwDRGlONzV4pgF0gZooBMWsz+JhpHrSk4WInOTW1JM4TDR7Vh3kxkdgo39quCtkydAu8TG6tUrQsbWIQhpMlyN81KbxQJM9MIkWPDKuByMc1n31pbvGPs6qrKem1Aa+dUGSTQJLrUwI2rKN3ZTpoZiaSPCuCDXJHRiQTg1wTM8fOaBpLNvuTWijZDlWghiVtwaqLQv8ADJV2t5ETURge9UCt0JFLD4GX041nOh8Q29KahsGK5JxQllljPUgdKML4DGQ3rSaaKTTDpaNnTqxXGRozvgGgm/Vm6iuPciTC0IAzMWUhht+RpRYgX8RxT0b6YSmAc0JV737pFx8q0g6IkkFggNtH3h3Y8A0Nw8hZgvvjgUeUsIwkyBSBgNV4tEcWEOdXOaiTKSFFlYYDUZZNQwOaBcIwycfSl0uTG3B2qRj2GJxxVJYWz8Qqq3feb4x51j9o/Co7a0YpCpu" alt="Тур">
+
+    <!-- Форма, яка відправляє дані на пошту -->
+    <form action="https://formspree.io" method="POST">
+        <label>Ім'я:</label>
+        <input type="text" name="name" required>
+
+        <label>Телефон:</label>
+        <input type="tel" name="phone" required>
+
+        <label>Кількість квитків (макс. 10):</label>
+        <input type="number" name="tickets" min="1" max="10" value="1" required>
+
+        <button type="submit">Забронювати на пошту</button>
+    </form>
+
+</body>
+</html>
