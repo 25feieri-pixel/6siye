@@ -2,25 +2,53 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Бронювання</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання туру</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 380px; margin: 20px auto; padding: 10px; }
-        img { width: 100%; border-radius: 6px; }
-        input, button { width: 100%; padding: 10px; margin: 6px 0; box-sizing: border-box; border-radius: 4px; border: 1px solid #ccc; }
-        button { background: #28a745; color: white; border: none; font-weight: bold; cursor: pointer; }
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 380px; 
+            margin: 20px auto; 
+            padding: 10px; 
+        }
+        img { 
+            width: 100%; 
+            border-radius: 6px; 
+            display: block;
+        }
+        input, button { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 6px 0; 
+            box-sizing: border-box; 
+            border-radius: 4px; 
+            border: 1px solid #ccc; 
+        }
+        button { 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            font-weight: bold; 
+            cursor: pointer; 
+        }
+        button:hover {
+            background: #218838;
+        }
     </style>
 </head>
 <body>
 
     <h3>Ваш тур</h3>
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk8BDg4OExETJhUVJk81LTVPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT//AABEIAJQA9gMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EADoQAAIBAwMBBgMHAwMEAwAAAAECAwAEERIhMUEFEyJRYXEygZEUI1KhscHRQuHwBjPxJENighU0ov/EABgBAAMBAQAAAAAAAAAAAAAAAAABAgME/8QAIxEAAgICAAMAAgMBAAAAAAAAAAECERIhMQNBUQQTMmFxUv/aAAwPLOADojlqbBwKQgffJpxZFIpAhlU+72pWVZEb3o8cg+VUuJTjIIwKaGwGSpBNdkcFeaBNcA7c+1KPMcYFOhDE+orlWGB0rOldzwDRGlONzV4pgF0gZooBMWsz+JhpHrSk4WInOTW1JM4TDR7Vh3kxkdgo39quCtkydAu8TG6tUrQsbWIQhpMlyN81KbxQJM9MIkWPDKuByMc1n31pbvGPs6qrKem1Aa+dUGSTQJLrUwI2rKN3ZTpoZiaSPCuCDXJHRiQTg1wTM8fOaBpLNvuTWijZDlWghiVtwaqLQv8ADJV2t5ETURge9UCt0JFLD4GX041nOh8Q29KahsGK5JxQllljPUgdKML4DGQ3rSaaKTTDpaNnTqxXGRozvgGgm/Vm6iuPciTC0IAzMWUhht+RpRYgX8RxT0b6YSmAc0JV737pFx8q0g6IkkFggNtH3h3Y8A0Nw8hZgvvjgUeUsIwkyBSBgNV4tEcWEOdXOaiTKSFFlYYDUZZNQwOaBcIwycfSl0uTG3B2qRj2GJxxVJYWz8Qqq3feb4x51j9o/Co7a0YpCpu" alt="Тур">
+    <!-- Зображення туру -->
+    <img src="https://via.placeholder.com/380x200?text=%D0%A2%D1%83%D1%80" alt="Фото туру">
 
+    <!-- Форма бронювання -->
     <form action="https://formspree.io/f/xzeeeerg" method="POST">
         <label>Ім'я:</label>
-        <input type="text" name="ПІБ" required>
+        <input type="text" name="ПІБ" required placeholder="Введіть ваше ім'я">
 
         <label>Телефон:</label>
-        <input type="tel" name="Телефон" required>
+        <input type="tel" name="Телефон" required placeholder="+380...">
 
         <label>Кількість квитків (макс. 10):</label>
         <input type="number" name="Квитків" min="1" max="10" value="1" required>
